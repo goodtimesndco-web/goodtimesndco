@@ -1,0 +1,27 @@
+# Render Blueprint — https://render.com/docs/blueprint-spec
+#
+# In the Render dashboard: New > Blueprint > select this repo. Render reads this
+# file and configures the service automatically. You'll still need to fill in
+# ADMIN_USER and ADMIN_PASS yourself (marked sync: false below so Render prompts
+# for them instead of storing defaults in this file).
+
+services:
+  - type: web
+    name: goodtimes-co
+    runtime: node
+    plan: starter
+    branch: main
+    buildCommand: echo "no build step — zero dependencies"
+    startCommand: node server/index.js
+    healthCheckPath: /
+    envVars:
+      - key: ADMIN_USER
+        sync: false
+      - key: ADMIN_PASS
+        sync: false
+      - key: DAILY_CAPACITY
+        value: "1"
+    disk:
+      name: goodtimes-data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 1

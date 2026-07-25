@@ -1,0 +1,17 @@
+{
+  "name": "goodtimes-co",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Good Times & Co. — luxury photobooth website and booking engine",
+  "main": "server/index.js",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node server/index.js"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {}
+}

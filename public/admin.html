@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin | Good Times & Co.</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body style="background:var(--cream-soft);">
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="brand">Good Times <span>&amp; Co.</span></a>
+    <span style="color:var(--gold-light); font-size:0.8rem; letter-spacing:0.1em; text-transform:uppercase;">Admin Dashboard</span>
+  </div>
+</nav>
+
+<section class="section--tight">
+  <div class="container">
+
+    <div class="admin-bar">
+      <div>
+        <span class="eyebrow">Bookings</span>
+        <h2 style="margin:0;">All Requests</h2>
+      </div>
+      <div class="admin-stats" id="stats"></div>
+    </div>
+
+    <div class="filter-bar" id="filters">
+      <button class="filter-btn active" data-status="">All</button>
+      <button class="filter-btn" data-status="pending">Pending</button>
+      <button class="filter-btn" data-status="confirmed">Confirmed</button>
+      <button class="filter-btn" data-status="completed">Completed</button>
+      <button class="filter-btn" data-status="cancelled">Cancelled</button>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Event Date</th>
+            <th>Client</th>
+            <th>Contact</th>
+            <th>Package</th>
+            <th>Add-Ons</th>
+            <th>Est. Total</th>
+            <th>Event Type</th>
+            <th>Venue</th>
+            <th>Status</th>
+            <th>Requested</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="bookings-body">
+          <tr><td colspan="11">Loading…</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<script src="/js/admin.js"></script>
+</body>
+</html>
