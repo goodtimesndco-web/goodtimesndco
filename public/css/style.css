@@ -245,6 +245,7 @@ p { margin: 0 0 1em; }
 .hero-content { position: relative; max-width: 760px; margin: 0 auto; }
 .hero h1 { color: var(--cream); }
 .hero .lede { color: #d7d9cd; margin-left: auto; margin-right: auto; }
+.hero .eyebrow { color: var(--lilac-light); }
 .hero-actions {
   display: flex;
   gap: 18px;
@@ -683,7 +684,13 @@ tr:last-child td { border-bottom: none; }
   margin: 100px auto;
   text-align: center;
 }
-
+.brand {
+   font-family: var(--font-display);
+   font-size: 2rem;
+   font-weight: 600;
+   color: var(--cream);
+   letter-spacing: 0.05em;
+}
 /* ---------- Misc ---------- */
 .divider { height: 1px; background: rgba(46,50,41,0.1); margin: 0; }
 .badge-row { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; margin-top: 40px; color: #83897a; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; }
